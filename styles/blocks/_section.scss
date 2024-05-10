@@ -1,0 +1,12 @@
+.section{
+
+    &:not(:last-child){
+        margin-bottom: 90px;
+    }
+
+    @include mobile{
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+}

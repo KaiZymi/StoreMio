@@ -1,0 +1,24 @@
+@import
+  'normalize',
+  'fonts',
+  'mixins',
+  'media',
+  'variables',
+  'utils',
+  'globals';
+
+  @import
+  'blocks/section',
+  'blocks/hero',
+  'blocks/header',
+  'blocks/buttons',
+  'blocks/product',
+  'blocks/catalog',
+  'blocks/footer',
+  'blocks-order/order',
+  'blocks-profile/profile',
+  'blocks-orders/profile-orders',
+  'blocks-basket/basket',
+  'blocks/burger-button',
+  'blocks/mobile-overlay',
+  'blocks-card/card'

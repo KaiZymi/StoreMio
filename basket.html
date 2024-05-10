@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>store</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner  container">
+            <div class="header__home">
+                <a href="./catalog-product.html"><img class="header__home-image"
+                        src="./img/material-symbols-light_home-outline.svg" alt="Home"></a>
+
+                <div class="header__home-description">
+                    <p> <span style="font-weight: bold;">МИОСТИМУЛЯТОР</span> <br>Улучшение качества жизни современными
+                        технологиями</p>
+                </div>
+                <div class="header__home-block hidden-mobile">
+                    <div class="header__home-call">
+                        <a href="" style="font-weight: bold;">+7(945)876-85-05</a>
+                        <a href="">email@mail.ru</a>
+                    </div>
+                    <p class="header__home-adress">ул.Версненский</p>
+                </div>
+
+            </div>
+            <div class="header__profile hidden-mobile">
+                <a href="./profile.html"><img src="./img/profile.svg" alt=""></a>
+                <a href="./basket.html"><img src="./img/basket.svg" alt=""></a>
+
+
+            </div>
+            <button class="header__burger-button burger-button visible-mobile" type="button"
+                onclick="mobileOverlay.showModal()">
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <section class="section container">
+            <div class="basket">
+                <h2 class="basket__title">Корзина</h2>
+                <div class="basket__select">
+                    <input type="checkbox" id="all" class="basket__select-check" onchange="toggleCheckboxes(this)">
+                    <label style="user-select: none;" for="all">Выбрать всё</label>
+
+                </div>
+
+                <div id="basket_products"></div>
+
+
+
+                <div class="basket__bottom">
+                    <div class="basket__bottom-time">Срок доставки 5 суток</div>
+                    <div class="basket__bottom-amount">Итог: <span
+                            style="color: var(--color-accent); margin-left: 50px;">4100</span></div>
+                </div>
+                <div class="basket__make">
+                    <a href="./making-order.html"><button class="button">Заказать</button></a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__home container">
+                <div class="footer__home-wrapper">
+                    <div class="footer__home-description">
+                        <p> <span style="font-weight: bold;">МИОСТИМУЛЯТОР</span> <br>Улучшение качества жизни
+                            современными
+                            технологиями</p>
+                    </div>
+                    <div class="footer__home-call">
+                        <a href="" style="font-weight: bold;">+7(945)876-85-05</a>
+                        <a href="">email@mail.ru</a>
+                    </div>
+                </div>
+
+
+                <p class="footer__home-adress hidden-mobile">ул.Версненский</p>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button cross-button" type="submit">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list">
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./catalog-product.html">Главная</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./profile.html">Профиль</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./profile-orders.html">Заказы</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./basket.html">Корзина</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <script src="./constants/root.js"></script>
+    <script src="./utils/localStorageUtil.js"></script>
+    <script src="./constants/catalog.js"></script>
+    <script src="./Basket/Basket.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+.profile{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: 131px 112px; 
+    background-image: center;
+
+    &__wrapper{
+        background: url('../img/yellow-blur.svg') center no-repeat;
+        background-size: 2000px 100%;
+        @include mobile{
+            background: none;
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    &__button{
+        width: 350px;
+        height: 70px;
+        font-size: 25px;
+        box-shadow: var(--shadow);
+        color: var(--color-accent);
+        background-color: var(--color-light);
+        padding-inline: 25px;
+
+        @include hover{
+            background-color: var(--color-accent);
+            color: var(--color-light);
+        }
+    }
+
+
+    &__descriptions{
+        
+
+        @include mobile-above{
+            width: 100%;
+            height: 620px;
+            display: flex;
+            column-gap: 30px;
+        }
+        
+    }
+
+    &__info-1{
+        margin-bottom: 30px;
+        @include mobile-above{
+            margin-bottom: 0px;
+            width: 50%;
+            box-shadow: var(--shadow);
+            background-color: var(--color-light);
+            padding: 35px;
+            height: 100%;
+        }
+
+    }
+
+    &__img{
+        max-width: 130px;
+        margin-bottom: 30px;
+        @include mobile-above{
+            max-width: 80%;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    }
+
+    &__info-2{
+        margin-bottom: 100px;
+
+        @include mobile-above{
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    &__adress{
+        margin-bottom: 30px;
+
+        @include mobile-above{
+            margin-bottom: 0px;
+            padding: 50px;
+            height: 50%;
+            box-shadow: var(--shadow);
+            background-color: var(--color-light);
+        }
+    }
+
+    &__password{
+
+        
+        @include mobile-above{
+            padding: 50px;
+            height: 50%;
+            box-shadow: var(--shadow);
+            background-color: var(--color-light);
+        }
+
+        &-button{
+            margin-top: 20px;
+            padding-inline: 65px;
+            @include mobile-above{
+                margin-top: 10px;
+                font-size: 15px;
+                border-radius: var(--border-radius);
+                padding-inline: 45px;
+                height: 35px;
+            }
+        }
+    
+    }
+
+    &__title{
+        margin-bottom: 35px;
+        color: var(--color-accent);
+        
+        font-weight: bold;
+    }
+
+    &__button{
+        margin-top: 10px;
+
+        &-active{
+            background-color: var(--color-accent);
+            color: white;
+        }
+    }
+
+    
+    &__block{
+        & label{
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        & input{
+            padding: 10px 0;
+            border-bottom: 100%;
+            border-bottom: 1px solid black;
+            width: 100%;
+
+            &:focus{
+                outline: none
+            }
+
+            @include hover{
+                cursor: pointer;
+            }
+
+        }
+    }
+
+}

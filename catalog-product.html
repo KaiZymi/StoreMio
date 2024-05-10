@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>store</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner  container">
+            <div class="header__home">
+                <a href="./catalog-product.html"><img class="header__home-image"
+                        src="./img/material-symbols-light_home-outline.svg" alt="Home"></a>
+
+                <div class="header__home-description">
+                    <p> <span style="font-weight: bold;">МИОСТИМУЛЯТОР</span> <br>Улучшение качества жизни современными
+                        технологиями</p>
+                </div>
+                <div class="header__home-block hidden-mobile">
+                    <div class="header__home-call">
+                        <a href="" style="font-weight: bold;">+7(945)876-85-05</a>
+                        <a href="">email@mail.ru</a>
+                    </div>
+                    <p class="header__home-adress">ул.Версненский</p>
+                </div>
+
+            </div>
+            <div class="header__profile hidden-mobile">
+                <a href="./profile.html"><img src="./img/profile.svg" alt=""></a>
+                <a href="./basket.html"><img src="./img/basket.svg" alt=""></a>
+
+
+            </div>
+            <button class="header__burger-button burger-button visible-mobile" type="button"
+                onclick="mobileOverlay.showModal()">
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="section container">
+            <div class="section__body">
+                <div class="hero">
+                    <div class="hero__container">
+                        <img class="hidden-desktop hero__container-block" src="./img/Ellipse-for-mobile.svg" alt="">
+
+
+                        <div class="hero__body">
+                            <h2 class="hero__title" style="font-weight: bold;">
+                                Миостимулятор TENS
+
+                            </h2>
+                            <div class="hero__description">
+                                <p>Улучшение качества жизни современными технологиями. Наши клиенты видят, слышат и
+                                    осязают
+                                    процесс раньше других</p>
+                            </div>
+                            <button class="hero__button button" type="button">
+                                Просмотреть каталог
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <img class="hero__image hidden-mobile" src="./img/sss3.svg" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section container">
+
+            <div class="section__body">
+                <div class="product">
+                    <div class="product__buttons hidden-mobile">
+                        <button class="button product__button">Миостимуляторы</button>
+                        <button class="button product__button">Массажёры</button>
+                        <button class="button product__button">Нейростимулятор</button>
+                    </div>
+
+                    <div class="hidden-desktop product__buttons-mobile">
+                        <button class="button product__button">Категории</button>
+                    </div>
+
+                    <div class="product__card hidden-mobile">
+                        <div class="product__info">
+                            <div class="product__info-body">
+                                <h4 class="product__info-name">TENS NEMS-107 <br>
+                                    <span class="product__info-article">Артикул:123422</span>
+
+                                </h4>
+
+                                <p class="product__info-description">Миостимуляция может помочь восстановлению после
+                                    травм и операция, ускорив процесс
+                                    заживления
+                                    тканей, напряженность. Для этого рекомендуется использовать низкочастотные импулься(
+                                    от
+                                    1 до
+                                    10 Гц) с длительностью до 1000 мс и интенсивностью до 40 мА. Также важно правильно
+                                    выбрать
+                                    места для электродов, чтобы достичь оптимального эффекта</p>
+                                <hr style="width: 100%;">
+                                <div class="product__info-cart">
+                                    <div class="product__price">1500р</div>
+                                    <div class="product__delivery">Срок доставки: от 5 суток</div>
+                                    <div class="button-add"> <img src="./img/basketCard.svg" alt="добавить в корзину">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <img class="product__info-image" src="./img/mio2 1.svg" alt="product" width="420">
+                        </div>
+
+                        <div class="product__description">
+                            <h4 class="product__description-title"> Характеристики </h4>
+                            <p class="product__description-body"> Высокая мощность для максимальной эффективности
+                                стимуляции. 0 независимых каналов для
+                                индивидуального подхода к каждому пользователю. Переменная частота импульсов от 1 до 100
+                                Гц
+                                для точной настройки под каждого пользователя. Адаптивная форма волны для оптимального
+                                комфорта и эффективности стимуляции. Полная водонепроницаемость для удобства
+                                использования в
+                                любых условиях. Встроенный Bluetooth для дистанционного управления устройством со
+                                смартфона.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section container">
+            <div class="catalog">
+                <h4 class="catalog__title hidden-mobile">Каталог</h4>
+                <div id="products"></div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__home container">
+                <div class="footer__home-wrapper">
+                    <div class="footer__home-description">
+                        <p> <span style="font-weight: bold;">МИОСТИМУЛЯТОР</span> <br>Улучшение качества жизни
+                            современными
+                            технологиями</p>
+                    </div>
+                    <div class="footer__home-call">
+                        <a href="" style="font-weight: bold;">+7(945)876-85-05</a>
+                        <a href="">email@mail.ru</a>
+                    </div>
+                </div>
+
+
+                <p class="footer__home-adress hidden-mobile">ул.Версненский</p>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button cross-button" type="submit">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list">
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./catalog-product.html">Главная</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./profile.html">Профиль</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./profile-orders.html">Заказы</a>
+                </li>
+                <li class="mobile-overlay__item">
+                    <a class="mobile-overlay__link" href="./basket.html">Корзина</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <script src="./constants/root.js"></script>
+    <script src="./utils/localStorageUtil.js"></script>
+    <script src="./constants/catalog.js"></script>
+    <script src="./Products/Products.js"></script>
+
+</body>
+
+</html>

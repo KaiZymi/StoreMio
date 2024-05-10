@@ -1,0 +1,114 @@
+.catalog{
+    margin-bottom: 70px;
+    
+
+    &__body{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    
+    &__title{
+        margin-bottom: 60px;
+    }
+
+    &__card{
+        min-height: 385px;
+        max-width: 300px;
+        box-shadow: var(--shadow);
+        padding: 15px 25px;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        --color-price: var(--color-accent);
+        transition-duration: 0.1s;
+        
+        @include mobile{
+            max-width: 100%;
+            padding: 25px 40px;
+        }
+
+        @include tablet{
+            max-width: 100%;
+        }
+
+        @include hover{
+            background-color: var(--color-accent);
+            color: var(--color-light);
+            
+            
+            
+
+            & .catalog__card-price{
+                align-content: center;
+                color: var(--color-yellow);
+                font-weight: bold;
+                font-size: 20px;         
+            }
+            & .catalog__card-button{
+                background-image: url('../img/basket_yellow.svg');
+            }
+
+        }
+
+        &-button{
+            background-image: url('../img/basketCard.svg');
+            background-size:cover;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: none;
+
+            &-active{
+                background-image: url('../img/basket_yellow.svg') !important;
+            }
+        }
+
+        &-title{
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        &-article{
+            height: 35px;
+            display: block;
+        }
+
+        &-top{
+            margin-bottom: 25px;
+        }
+
+        &-description{
+            margin-bottom: 10px;
+        }
+
+        &-buy{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-price{
+            align-content: center;
+            color: var(--color-price);
+            font-weight: bold;
+            font-size: 20px;         
+        }
+
+
+       
+
+    }
+    
+}
