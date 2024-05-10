@@ -347,6 +347,10 @@
     &__bottom{
         display: flex;
         justify-content: space-between;
+
+        @include mobile{
+            font-size: 15px;
+        }
         
         &-time{
             color: var(--color-accent);
