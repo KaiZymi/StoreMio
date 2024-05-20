@@ -59,11 +59,22 @@
             height: 100%;
         }
 
+        &-button{
+            display: block;
+            font-size: 15px;
+            padding-inline: 35px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: var(--border-radius);
+            height: 35px;
+        }
+
     }
 
     &__img{
         max-width: 130px;
         margin-bottom: 30px;
+        /* max-height: 40%; */
         @include mobile-above{
             max-width: 80%;
             margin-bottom: 0px;
@@ -111,6 +122,8 @@
         &-button{
             margin-top: 20px;
             padding-inline: 65px;
+            display: block;
+            margin: 0 auto;
             @include mobile-above{
                 margin-top: 10px;
                 font-size: 15px;

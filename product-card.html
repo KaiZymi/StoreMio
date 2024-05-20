@@ -51,34 +51,9 @@
     <main class="content">
 
         <section class="container">
-            <div class="product-card">
-                <div class="product-card__block">
-
-                    <div class="product-card__swiper">
-                        <div class="product-card__swiper-block swiper">
-                            <div class="product-card__swiper-block-slide">
-                                <img src="./imgCard/img2.png" alt="">
-                            </div>
-                            <div class="product-card__swiper-block-slide">
-                                <img src="./imgCard/img2.png" alt="">
-                            </div>
-                            <div class="product-card__swiper-block-slide">
-                                <img src="./imgCard/img2.png" alt="">
-                            </div>
-                            <div class="product-card__swiper-block-slide">
-                                <img src="./imgCard/img2.png" alt="">
-                            </div>
+            <div class="product-card" id="productDetails">
 
 
-
-                        </div>
-                        <div class="product-card__swiper-block-pagination"></div>
-                        <div class="product-card__swiper-button-next"></div>
-                        <div class="product-card__swiper-button-prev"></div>
-                    </div>
-
-
-                </div>
             </div>
         </section>
 
@@ -129,27 +104,20 @@
         </div>
     </dialog>
 
-
-
-    <script>
-        const swiper = new Swiper('.product-card__swiper-block', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: '.product-card__swiper-block-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.product-card__swiper-button-next',
-                prevEl: '.product-card__swiper-button-prev',
-            },
-        });
-    </script>
+    <div class="popup" style="display: none;">
+        <p>Товар добавлен в корзину!</p>
+    </div>
+    <div class="popup-remove" style="display: none;">
+        <p>Товар удален из корзины!</p>
+    </div>
 
 
 
+    <script src="./constants/catalog.js"></script>
+    <script src="./utils/localStorageUtil.js"></script>
     <script src="./Card/Card.js"></script>
+
+
 </body>
 
 </html>

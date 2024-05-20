@@ -81,12 +81,18 @@
                             </div>
 
                             <div class="order__block">
-                                <label for="">Способ оплаты:</label>
-                                <input type="text" placeholder="Онлайн оплата">
+                                <label for="payment-method">Способ оплаты:</label>
+                                <select id="payment-method" class="custom-select">
+                                    <option value="online">Онлайн оплата</option>
+                                    <option value="cash">Наличными</option>
+                                </select>
                             </div>
+
                             <div class="order__block">
-                                <label for="">Метод оплаты:</label>
-                                <input type="text" placeholder="Карта">
+                                <label for="payment-type">Метод оплаты:</label>
+                                <select id="payment-type" class="custom-select">
+                                    <option value="card">Карта</option>
+                                </select>
                             </div>
 
                             <div class="order__block">
@@ -156,6 +162,21 @@
             </ul>
         </div>
     </dialog>
+
+    <script>
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const paymentTypeSelect = document.getElementById('payment-type');
+
+        paymentMethodSelect.addEventListener('change', function () {
+            if (paymentMethodSelect.value === 'cash') {
+                paymentTypeSelect.selectedIndex = 0;
+                paymentTypeSelect.disabled = true;
+                /* paymentTypeSelect.value = '';  */
+            } else {
+                paymentTypeSelect.disabled = false;
+            }
+        });
+    </script>
 
 </body>
 

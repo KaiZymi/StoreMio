@@ -60,20 +60,22 @@
                             <img class="profile__img" src="./img/photo-camera.svg" alt="profile">
                             <form action="" class="profile__form">
                                 <div class="profile__block">
-                                    <label for="">ФИО:</label>
-                                    <input type="text" placeholder="Инванов Иван Иванович">
+                                    <label for="profile-fullName">ФИО:</label>
+                                    <input type="text" id="profile-fullName" placeholder="Иванов Иван Иванович"
+                                        disabled>
                                 </div>
                                 <div class="profile__block">
-                                    <label for="">E-mail:</label>
-                                    <input type="text" placeholder="user@mail.ru">
+                                    <label for="profile-email">E-mail:</label>
+                                    <input type="text" id="profile-email" placeholder="user@mail.ru" disabled>
                                 </div>
                                 <div class="profile__block">
-                                    <label for="">Телефон:</label>
-                                    <input type="text" placeholder="+7(999) 228-00-77">
+                                    <label for="profile-phone">Телефон:</label>
+                                    <input type="text" id="profile-phone" placeholder="+7(999) 228-00-77" disabled>
                                 </div>
-
                             </form>
-
+                            <!-- <button id="controlButton" class="button profile__info-1-button"
+                                onclick="toggleInputs()">Редактировать
+                                профиль</button> -->
                         </div>
 
                         <div class="profile__info-2">
@@ -81,12 +83,13 @@
                                 <h4 class="profile__title">Адрес доставки</h4>
                                 <form action="">
                                     <div class="profile__block">
-                                        <label for="">Страна:</label>
-                                        <input type="text" placeholder="Россия">
+                                        <label for="profile-country">Страна:</label>
+                                        <input type="text" id="profile-country" placeholder="Россия" disabled>
                                     </div>
                                     <div class="profile__block">
-                                        <label for="">Адрес:</label>
-                                        <input type="text" placeholder="г.Москва, ул.Огурчиковая, д.3к10">
+                                        <label for="profile-address">Адрес:</label>
+                                        <input type="text" id="profile-address"
+                                            placeholder="г.Москва, ул.Огурчиковая, д.3к10" disabled>
                                     </div>
                                 </form>
                             </div>
@@ -94,11 +97,14 @@
                                 <h4 class="profile__title">Смена пароля</h4>
                                 <form action="">
                                     <div class="profile__block">
-                                        <label for="">Новый пароль:</label>
-                                        <input type="text" placeholder="super333Secret">
+                                        <label for="profile-password">Новый пароль:</label>
+                                        <input type="text" id="profile-password" placeholder="super333Secret" disabled>
                                     </div>
-                                    <button class="button profile__password-button">Сменить</button>
+
                                 </form>
+                                <button id="controlButton" class="button profile__info-1-button"
+                                    onclick="toggleInputs()">Редактировать
+                                    профиль</button>
                             </div>
                         </div>
                     </div>
@@ -136,6 +142,9 @@
         </div>
     </footer>
 
+    <div class="popup" style="display: none;">
+        <p>Данные сохранены!</p>
+    </div>
 
     <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
         <form class="mobile-overlay__close-button-wrapper" method="dialog">
@@ -160,6 +169,9 @@
             </ul>
         </div>
     </dialog>
+
+
+    <script src="./Profile/Profile.js"></script>
 
 </body>
 

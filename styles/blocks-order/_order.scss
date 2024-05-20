@@ -52,7 +52,7 @@
             margin-top: 20px;
         }
 
-        & input{
+        & select, input{
             padding: 10px 0;
             border-bottom: 100%;
             border-bottom: 1px solid black;
@@ -60,6 +60,13 @@
 
             &:focus{
                 outline: none
+            }
+
+            &.custom-select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                cursor: pointer;
             }
 
             @include hover{

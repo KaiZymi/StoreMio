@@ -1,0 +1,26 @@
+.popup{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    
+    background-color: var(--color-yellow);
+    color: var(--color-light);
+    box-shadow: var(--shadow);
+    
+    padding: 15px 30px;
+    display: none;
+
+    &-remove{
+        position: fixed;
+        top: 30px;
+        right: 10px;
+        background-color: var(--color-red);
+        color: var(--color-light);
+        box-shadow: var(--shadow);
+        
+        padding: 15px 30px;
+        display: none;
+    }
+    
+
+}

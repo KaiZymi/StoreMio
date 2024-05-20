@@ -9,23 +9,43 @@ class Basket {
         const result = localStorageUtil.deleteProducts(id);
     }
 
+    handleImageHover(imageElement, gifProduct) {
+        const originalSrc = imageElement.src;
+        let isGifShowing = false;
+
+        imageElement.addEventListener("mouseover", () => {
+            if (!isGifShowing) {
+                imageElement.src = `./gifs/${gifProduct}`; // При наведении показываем gifProduct
+                isGifShowing = true;
+            }
+        });
+
+        imageElement.addEventListener("mouseout", () => {
+            imageElement.src = originalSrc; // При уходе показываем images[0]
+            isGifShowing = false;
+        });
+    }
+
     render(count) {
         /* const productStore = localStorageUtil.getProducts(); */
         let htmlBasket = "";
-
-        CATALOG.forEach(
-            ({ id, name, article, gifProduct, img, description, price }) => {
-                if (count[id] > 0) {
-                    htmlBasket += `
+        let totalAmount = 0;
+        CATALOG.forEach(({ id, name, article, images, description, price }) => {
+            if (count[id] > 0) {
+                totalAmount += price * count[id];
+                htmlBasket += `
                     <li class="basket__item" id="basketItem${id}">
                     <div class="basket__item-select">
                         <div class="basket__item-select-box">
                             <input type="checkbox" id="check${id}" class="basket__item-select-box-check">
                             <label style="user-select: none;" for="check${id}"></label>
                         </div>
-                        <img alt="" class="basket__item-select-img" style = " --gif-image:url('../gifs/${gifProduct}');
-                        --back-image: url('../imgCard/${img}');
-                        ">
+
+                        <a href="product-card.html?id=${id}">
+                            <img src = "./imgCard/${images[0]}" class="basket__item-select-img" > 
+                        </a>    
+                        
+                        
                     </div>
                     <div class="basket__item-options">
                         <div class="basket__item-info">
@@ -58,9 +78,8 @@ class Basket {
                     </div>
                 </li>
                     `;
-                }
             }
-        );
+        });
 
         const html = `
             <ul class="basket__list">
@@ -68,7 +87,24 @@ class Basket {
             </ul>
         `;
 
+        const totalAmountElement = document.querySelector(
+            ".basket__bottom-amount span"
+        );
+        totalAmountElement.textContent = totalAmount;
+
         ROOT_BASKET_PRODUCTS.innerHTML = html;
+
+        const imageElements = document.querySelectorAll(
+            ".basket__item-select-img"
+        );
+        imageElements.forEach((imageElement, index) => {
+            console.log(index);
+            this.handleImageHover(
+                imageElement,
+                CATALOG[index].gifProduct,
+                CATALOG[index].images[0]
+            );
+        });
     }
 }
 
@@ -105,10 +141,8 @@ buttonsRemove.forEach((button, index) => {
             counters[index].value = count;
 
             if (count === 0) {
-                console.log(count, index);
                 const basketItemToRemove = button.closest(".basket__item");
 
-                console.log(basketItemToRemove);
                 if (basketItemToRemove) {
                     basketItemToRemove.remove();
                 }
